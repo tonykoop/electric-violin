@@ -1,0 +1,7 @@
+check_id,area,target,method,tolerance,measured,result,action
+VAL-001,Scale length,"328 mm / 12.91 in vibrating length","measure nut to bridge","+/- 1 mm",TBD,TBD,"Reset bridge/nut position"
+VAL-002,String tension,"within selected set published range","manufacturer chart","within published range",TBD,TBD,"Change string set"
+VAL-003,Neck/body stiffness,"no permanent movement after 24 hours at pitch","measure relief/projection before and after","movement TBD",TBD,TBD,"Revise neck or joint"
+VAL-004,Pickup output,"clean signal through intended preamp","record direct test and listen for noise","no crackle/dropout",TBD,TBD,"Revise wiring/shielding/preamp"
+VAL-005,Balance,"comfortable standing/seated hold","mockup and playing posture photos","no neck dive",TBD,TBD,"Move mass/strap/shoulder interface"
+VAL-006,Action,"playable bowed action across strings","measure at fingerboard end","target TBD",TBD,TBD,"Adjust bridge/fingerboard"

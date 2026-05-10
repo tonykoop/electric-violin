@@ -1,0 +1,6 @@
+item,required_spec,search_terms,supplier_candidates,date_checked,unit_price_usd,lead_time,substitution_risk,notes
+Piezo bridge,"bridge compatible with 4/4 violin scale and selected string count","electric violin piezo bridge 4 string 5 string","music electronics suppliers; luthier suppliers",TBD,TBD,TBD,High,"Pickup choice drives bridge geometry"
+Preamp,"high impedance piezo input, low noise output","piezo violin preamp high impedance","music electronics suppliers",TBD,TBD,TBD,High,"Direct piezo output may sound thin/noisy"
+Strings,"4 or 5 string set with published tensions","electric violin strings tension chart","string manufacturers; music suppliers",TBD,TBD,TBD,Low,"Use actual tension values"
+Body/neck wood,"stable clear hardwood blank","electric violin body blank maple neck blank","hardwood dealer; luthier supplier",TBD,TBD,TBD,Medium,"Weight and balance matter"
+Tuners/fittings,"hardware matching headstock or pegbox design","violin geared pegs tailpiece fine tuners","luthier suppliers",TBD,TBD,TBD,Medium,"Geometry depends on CAD"

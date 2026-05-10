@@ -1,0 +1,331 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Electric Violin Build Packet</title><style>
+body { font-family: Arial, sans-serif; color: #111; line-height: 1.35; max-width: 900px; margin: 32px auto; }
+h1 { font-size: 28px; border-bottom: 2px solid #222; padding-bottom: 6px; }
+h2 { font-size: 22px; margin-top: 28px; }
+h3 { font-size: 18px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; font-size: 12px; }
+th, td { border: 1px solid #888; padding: 6px; vertical-align: top; }
+th { background: #e8eef8; }
+pre { white-space: pre-wrap; background: #f5f5f5; padding: 10px; border: 1px solid #ddd; }
+.page-break { page-break-before: always; break-before: page; }
+@media print { body { margin: 0.5in; max-width: none; } a { color: #111; } }
+</style></head><body>
+<h1>Electric Violin Build Packet Print Packet</h1>
+
+<p>Generated: 2026-05-09</p>
+<p>Packet folder: `/tmp/electric-violin-codex-gina-r2-build-packet`</p>
+
+<h2>File Map</h2>
+
+<table>
+<tr><th>File</th><th>Purpose</th></tr>
+<tr><td>`design.md`</td><td>Project intent, catalog metadata, assumptions, and validation plan.</td></tr>
+<tr><td>`bom.csv`</td><td>Starter bill of materials with part categories, quantities, drawing refs, and notes.</td></tr>
+<tr><td>`sourcing.csv`</td><td>Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.</td></tr>
+<tr><td>`cut-list.csv`</td><td>Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.</td></tr>
+<tr><td>`drawing-brief.md`</td><td>Manufacturing drawing and technical product sketch brief.</td></tr>
+<tr><td>`assembly-manual.md`</td><td>Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.</td></tr>
+<tr><td>`validation.csv`</td><td>Target/measured values, tolerance, environment, result, and tuning/build action log.</td></tr>
+<tr><td>`supplier-rfq.md`</td><td>Supplier email/request-for-quote starter.</td></tr>
+<tr><td>`visual-bom-brief.md`</td><td>Art direction for an image-forward visual BOM.</td></tr>
+<tr><td>`wolfram-starter.wl`</td><td>Wolfram starter for physics, optimization, visualization, and validation.</td></tr>
+<tr><td>`README.md`</td><td>Project artifact.</td></tr>
+<tr><td>`photo-shotlist.md`</td><td>Project artifact.</td></tr>
+<tr><td>`risks.md`</td><td>Project artifact.</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>design.md</h2>
+
+<p>Project intent, catalog metadata, assumptions, and validation plan.</p>
+
+<h1>Electric Violin Design</h1>
+
+<h2>Intent</h2>
+
+<p>Create an L2 packet for a solid-body electric violin that can become a CAD and</p>
+<p>shop prototype while keeping the unresolved pickup, ergonomics, and load</p>
+<p>questions visible.</p>
+
+<h2>Readiness</h2>
+
+<p>L2 scaffold. This is ready for CAD layout and component sourcing review, not</p>
+<p>for production or final electrical performance claims.</p>
+
+<h2>Governing Model</h2>
+
+<p>Pitch is controlled by Mersenne-Taylor string behavior. The body is primarily a</p>
+<p>mechanical support and ergonomic structure; output depends on bridge/piezo</p>
+<p>coupling, preamp impedance, wiring noise, and player setup.</p>
+
+<pre><code>
+f = (1 / (2 L)) * sqrt(T / mu)
+</code></pre>
+
+<h2>Baseline Assumptions</h2>
+
+<table>
+<tr><th>Parameter</th><th>Baseline</th><th>Notes</th></tr>
+<tr><td>Scale length</td><td>328 mm / 12.91 in</td><td>Violin standard</td></tr>
+<tr><td>Primary tuning</td><td>G3-D4-A4-E5</td><td>Optional C3-G3-D4-A4-E5 variant</td></tr>
+<tr><td>Body</td><td>Solid hardwood or laminated body</td><td>Chambering optional after stiffness check</td></tr>
+<tr><td>Neck</td><td>Integrated or bolted maple neck</td><td>Joint must resist string pull</td></tr>
+<tr><td>Pickup</td><td>Piezo bridge</td><td>Preamp/impedance matching required</td></tr>
+<tr><td>Target total tension</td><td>45-65 lbf</td><td>5-string set likely higher</td></tr>
+</table>
+
+<h2>Tension And Electronics Notes</h2>
+
+<ul>
+<li>Use published string tension data before sizing the neck/body joint.</li>
+<li>Shield and strain-relieve wiring before closing any cavity.</li>
+<li>Verify piezo output through the intended preamp, not only direct to an amp.</li>
+<li>Balance the instrument with shoulder rest/chin rest installed.</li>
+</ul>
+
+<h2>Known Gaps</h2>
+
+<ul>
+<li>No body outline or ergonomic mockup evidence.</li>
+<li>No pickup/preamp selection or wiring test.</li>
+<li>No CAD neck-joint/load review.</li>
+<li>No sourceability/pricing check.</li>
+<li>No setup measurements.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>bom.csv</h2>
+
+<p>Starter bill of materials with part categories, quantities, drawing refs, and notes.</p>
+
+<table>
+<tr><th>item</th><th>qty</th><th>unit</th><th>material_or_spec</th><th>estimated_cost_usd</th><th>notes</th></tr>
+<tr><td>Body blank</td><td>1</td><td>ea</td><td>maple, alder, walnut, or laminated hardwood body blank</td><td>70</td><td>Stability and weight matter</td></tr>
+<tr><td>Neck blank</td><td>1</td><td>ea</td><td>maple or laminated neck stock</td><td>55</td><td>Integrated or bolt-on TBD</td></tr>
+<tr><td>Fingerboard</td><td>1</td><td>ea</td><td>ebony, composite, or hard maple</td><td>35</td><td>Scoop/setup TBD</td></tr>
+<tr><td>Piezo bridge</td><td>1</td><td>ea</td><td>4-string violin piezo bridge or 5-string variant if selected</td><td>80</td><td>Compatibility with string count is critical</td></tr>
+<tr><td>Preamp/output jack</td><td>1</td><td>set</td><td>high-impedance piezo preamp and 1/4 in output</td><td>45</td><td>May be external for first prototype</td></tr>
+<tr><td>Tuners/pegs</td><td>4</td><td>ea</td><td>violin pegs, geared pegs, or machine tuners</td><td>40</td><td>5-string variant needs five</td></tr>
+<tr><td>Tailpiece/fine tuners</td><td>1</td><td>set</td><td>violin tailpiece compatible with pickup bridge</td><td>35</td><td>String spacing must match</td></tr>
+<tr><td>String set</td><td>1</td><td>set</td><td>4-string or 5-string electric/acoustic violin set</td><td>55</td><td>Use published tension data</td></tr>
+<tr><td>Chin/shoulder interface</td><td>1</td><td>set</td><td>chin rest and shoulder rest mounting plan</td><td>35</td><td>Balance validation item</td></tr>
+<tr><td>Finish/electrical supplies</td><td>1</td><td>lot</td><td>finish, shielding, wire, solder, heat shrink</td><td>35</td><td>Noise control TBD</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>sourcing.csv</h2>
+
+<p>Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.</p>
+
+<table>
+<tr><th>item</th><th>required_spec</th><th>search_terms</th><th>supplier_candidates</th><th>date_checked</th><th>unit_price_usd</th><th>lead_time</th><th>substitution_risk</th><th>notes</th></tr>
+<tr><td>Piezo bridge</td><td>bridge compatible with 4/4 violin scale and selected string count</td><td>electric violin piezo bridge 4 string 5 string</td><td>music electronics suppliers; luthier suppliers</td><td>TBD</td><td>TBD</td><td>TBD</td><td>High</td><td>Pickup choice drives bridge geometry</td></tr>
+<tr><td>Preamp</td><td>high impedance piezo input, low noise output</td><td>piezo violin preamp high impedance</td><td>music electronics suppliers</td><td>TBD</td><td>TBD</td><td>TBD</td><td>High</td><td>Direct piezo output may sound thin/noisy</td></tr>
+<tr><td>Strings</td><td>4 or 5 string set with published tensions</td><td>electric violin strings tension chart</td><td>string manufacturers; music suppliers</td><td>TBD</td><td>TBD</td><td>TBD</td><td>Low</td><td>Use actual tension values</td></tr>
+<tr><td>Body/neck wood</td><td>stable clear hardwood blank</td><td>electric violin body blank maple neck blank</td><td>hardwood dealer; luthier supplier</td><td>TBD</td><td>TBD</td><td>TBD</td><td>Medium</td><td>Weight and balance matter</td></tr>
+<tr><td>Tuners/fittings</td><td>hardware matching headstock or pegbox design</td><td>violin geared pegs tailpiece fine tuners</td><td>luthier suppliers</td><td>TBD</td><td>TBD</td><td>TBD</td><td>Medium</td><td>Geometry depends on CAD</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>cut-list.csv</h2>
+
+<p>Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.</p>
+
+<table>
+<tr><th>part</th><th>qty</th><th>rough_dimensions_in</th><th>final_dimensions_in</th><th>material</th><th>grain_or_orientation</th><th>operation</th><th>notes</th></tr>
+<tr><td>Body</td><td>1</td><td>1.75 x 7.0 x 18.0</td><td>outline TBD</td><td>hardwood/lamination</td><td>stable, attractive face optional</td><td>CNC/profile route, cavity route</td><td>Weight/balance TBD</td></tr>
+<tr><td>Neck</td><td>1</td><td>1.5 x 2.5 x 14.0</td><td>profile TBD</td><td>maple/lamination</td><td>quarter grain preferred</td><td>saw, route, carve</td><td>Joint design TBD</td></tr>
+<tr><td>Fingerboard</td><td>1</td><td>0.35 x 1.75 x 11.0</td><td>scoop/profile TBD</td><td>ebony/composite/maple</td><td>long grain</td><td>plane and fit</td><td>Setup after stringing</td></tr>
+<tr><td>Electronics cavity cover</td><td>1</td><td>0.125 x 3.0 x 5.0</td><td>fit to cavity</td><td>plastic/wood</td><td>stable</td><td>cut and drill</td><td>Shielding plan TBD</td></tr>
+<tr><td>Bridge/pickup fit area</td><td>1</td><td>TBD</td><td>TBD</td><td>body/bridge interface</td><td>aligned to string path</td><td>route/drill after bridge selection</td><td>Do not cut before hardware arrives</td></tr>
+<tr><td>Headstock/pegbox area</td><td>1</td><td>included in neck</td><td>layout TBD</td><td>neck stock</td><td>grain lengthwise</td><td>drill/ream or route tuner holes</td><td>4/5-string variant changes layout</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>drawing-brief.md</h2>
+
+<p>Manufacturing drawing and technical product sketch brief.</p>
+
+<h1>Electric Violin Drawing Brief</h1>
+
+<p>Required first drawings:</p>
+
+<ul>
+<li>Body plan with bridge line, string paths, pickup, controls, jack, and cavity.</li>
+<li>Side setup drawing with nut, fingerboard, bridge, action, and tailpiece.</li>
+<li>Neck/body joint detail.</li>
+<li>Headstock or pegbox drilling layout for 4-string and optional 5-string.</li>
+<li>Wiring schematic with shielding and strain relief.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>assembly-manual.md</h2>
+
+<p>Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.</p>
+
+<h1>Electric Violin Assembly Manual</h1>
+
+<p>1. Choose 4-string or 5-string baseline before final CAD.</p>
+<p>2. Select pickup bridge and preamp so the CAD reflects real hardware.</p>
+<p>3. Produce body, neck, fingerboard, bridge, electronics, and ergonomic drawings.</p>
+<p>4. Cut body and neck oversize, then dry-fit the neck/body joint.</p>
+<p>5. Route electronics cavity and wire path only after component dimensions are</p>
+<p>   confirmed.</p>
+<p>6. Fit fingerboard, nut, bridge, tailpiece, and tuners.</p>
+<p>7. Wire pickup, jack, shielding, and preamp with strain relief.</p>
+<p>8. String gradually, test signal, and record setup/balance data.</p>
+
+<p>Safety: protect eyes during first pitch-up and ventilate during soldering or</p>
+<p>finish work.</p>
+
+<div class="page-break"></div>
+
+<h2>validation.csv</h2>
+
+<p>Target/measured values, tolerance, environment, result, and tuning/build action log.</p>
+
+<table>
+<tr><th>check_id</th><th>area</th><th>target</th><th>method</th><th>tolerance</th><th>measured</th><th>result</th><th>action</th></tr>
+<tr><td>VAL-001</td><td>Scale length</td><td>328 mm / 12.91 in vibrating length</td><td>measure nut to bridge</td><td>+/- 1 mm</td><td>TBD</td><td>TBD</td><td>Reset bridge/nut position</td></tr>
+<tr><td>VAL-002</td><td>String tension</td><td>within selected set published range</td><td>manufacturer chart</td><td>within published range</td><td>TBD</td><td>TBD</td><td>Change string set</td></tr>
+<tr><td>VAL-003</td><td>Neck/body stiffness</td><td>no permanent movement after 24 hours at pitch</td><td>measure relief/projection before and after</td><td>movement TBD</td><td>TBD</td><td>TBD</td><td>Revise neck or joint</td></tr>
+<tr><td>VAL-004</td><td>Pickup output</td><td>clean signal through intended preamp</td><td>record direct test and listen for noise</td><td>no crackle/dropout</td><td>TBD</td><td>TBD</td><td>Revise wiring/shielding/preamp</td></tr>
+<tr><td>VAL-005</td><td>Balance</td><td>comfortable standing/seated hold</td><td>mockup and playing posture photos</td><td>no neck dive</td><td>TBD</td><td>TBD</td><td>Move mass/strap/shoulder interface</td></tr>
+<tr><td>VAL-006</td><td>Action</td><td>playable bowed action across strings</td><td>measure at fingerboard end</td><td>target TBD</td><td>TBD</td><td>TBD</td><td>Adjust bridge/fingerboard</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>supplier-rfq.md</h2>
+
+<p>Supplier email/request-for-quote starter.</p>
+
+<h1>Supplier RFQ Draft</h1>
+
+<p>Hello,</p>
+
+<p>Please quote parts for a solid-body electric violin prototype: piezo bridge,</p>
+<p>high-impedance preamp or recommended electronics, output jack, violin string</p>
+<p>set with published tensions, tuners/fittings, and any wiring/shielding supplies.</p>
+
+<p>Please include dimensions, compatibility notes, unit price, lead time, and</p>
+<p>recommended substitutions for 4-string and 5-string variants.</p>
+
+<div class="page-break"></div>
+
+<h2>visual-bom-brief.md</h2>
+
+<p>Art direction for an image-forward visual BOM.</p>
+
+<h1>Visual BOM Brief</h1>
+
+<p>Show the solid body and neck with exploded callouts for pickup bridge, preamp,</p>
+<p>jack, wiring, shielding, tailpiece, tuners, fingerboard, strings, chin/shoulder</p>
+<p>interface, finish, and cavity cover.</p>
+
+<div class="page-break"></div>
+
+<h2>wolfram-starter.wl</h2>
+
+<p>Wolfram starter for physics, optimization, visualization, and validation.</p>
+
+<pre><code>
+(* Electric violin open-string starter. Values are first-pass assumptions. *)
+ClearAll[&quot;Global`*&quot;];
+a4 = 440;
+freqFromMidi[m_] := a4*2^((m - 69)/12);
+scaleLengthIn = 12.91;
+tuning4 = &lt;|&quot;G3&quot; -&gt; 55, &quot;D4&quot; -&gt; 62, &quot;A4&quot; -&gt; 69, &quot;E5&quot; -&gt; 76|&gt;;
+tuning5 = &lt;|&quot;C3&quot; -&gt; 48, &quot;G3&quot; -&gt; 55, &quot;D4&quot; -&gt; 62, &quot;A4&quot; -&gt; 69, &quot;E5&quot; -&gt; 76|&gt;;
+
+makeRows[tuning_] := KeyValueMap[
+  &lt;|&quot;string&quot; -&gt; #1, &quot;frequencyHz&quot; -&gt; N[freqFromMidi[#2]],
+    &quot;scaleLengthIn&quot; -&gt; scaleLengthIn|&gt; &amp;,
+  tuning
+];
+
+&lt;|&quot;fourString&quot; -&gt; Dataset[makeRows[tuning4]], &quot;fiveString&quot; -&gt; Dataset[makeRows[tuning5]]|&gt;
+</code></pre>
+
+<div class="page-break"></div>
+
+<h2>README.md</h2>
+
+<p>Project artifact.</p>
+
+<h1>Electric Violin</h1>
+
+<p>Engineering documentation and parametric design table for the electric violin -</p>
+<p>solid-body 4- and 5-string variants with piezo bridge pickup integration.</p>
+
+<p>Part of the [tonykoop/instrument-maker](https://github.com/tonykoop/instrument-maker) catalogue.</p>
+
+<h2>Readiness</h2>
+
+<p>L2 scaffold. This repo now includes root-mode build packet documentation for a</p>
+<p>solid-body electric violin prototype. It is not L3 because CAD, electronics</p>
+<p>verification, sourceability, ergonomic balance, and measured setup data remain</p>
+<p>open.</p>
+
+<h2>Packet Contents</h2>
+
+<ul>
+<li>`design.md` - solid-body violin assumptions and 4/5-string variant notes.</li>
+<li>`bom.csv`, `sourcing.csv`, `cut-list.csv`, `validation.csv` - packet tables.</li>
+<li>`assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.</li>
+<li>`drawing-brief.md`, `drawings/README.md`, `cad/README.md`,</li>
+</ul>
+<p>  `wolfram-starter.wl`, `wolfram/README.md` - starter technical artifacts.</p>
+
+<h2>String-Scale Assumptions</h2>
+
+<p>Baseline: 4-string violin scale at 328 mm / 12.91 in with optional 5-string</p>
+<p>variant adding C3. Use published string tension data, then verify bridge/piezo</p>
+<p>compatibility and neck/body stiffness before first full setup.</p>
+
+<h2>License</h2>
+
+<p>[CC BY 4.0](LICENSE) - see LICENSE for details.</p>
+
+<div class="page-break"></div>
+
+<h2>photo-shotlist.md</h2>
+
+<p>Project artifact.</p>
+
+<h1>Photo Shotlist</h1>
+
+<ul>
+<li>Body and neck blank orientation.</li>
+<li>Full-size body/hardware layout before cutting.</li>
+<li>Pickup bridge and electronics dimensions on arrival.</li>
+<li>Neck/body dry fit and string path check.</li>
+<li>Wiring/shielding before cavity close.</li>
+<li>First signal test, action readings, and balance/posture photos.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>risks.md</h2>
+
+<p>Project artifact.</p>
+
+<h1>Electric Violin Risks</h1>
+
+<ul>
+<li>Pickup/preamp mismatch can produce weak, noisy, or brittle output.</li>
+<li>Neck/body joint and bridge support are not validated under final tension.</li>
+<li>Poor balance can make the instrument uncomfortable even if it works</li>
+</ul>
+<p>  electrically.</p>
+<ul>
+<li>Hardware dimensions may force CAD changes after sourcing.</li>
+<li>Remain at L2 until CAD, electronics, setup, and balance evidence are logged.</li>
+</ul>
+</body></html>

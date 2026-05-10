@@ -1,0 +1,7 @@
+part,qty,rough_dimensions_in,final_dimensions_in,material,grain_or_orientation,operation,notes
+Body,1,"1.75 x 7.0 x 18.0","outline TBD","hardwood/lamination","stable, attractive face optional","CNC/profile route, cavity route","Weight/balance TBD"
+Neck,1,"1.5 x 2.5 x 14.0","profile TBD","maple/lamination","quarter grain preferred","saw, route, carve","Joint design TBD"
+Fingerboard,1,"0.35 x 1.75 x 11.0","scoop/profile TBD","ebony/composite/maple","long grain","plane and fit","Setup after stringing"
+Electronics cavity cover,1,"0.125 x 3.0 x 5.0","fit to cavity","plastic/wood","stable","cut and drill","Shielding plan TBD"
+Bridge/pickup fit area,1,"TBD","TBD","body/bridge interface","aligned to string path","route/drill after bridge selection","Do not cut before hardware arrives"
+Headstock/pegbox area,1,"included in neck","layout TBD","neck stock","grain lengthwise","drill/ream or route tuner holes","4/5-string variant changes layout"

@@ -1,0 +1,11 @@
+item,qty,unit,material_or_spec,estimated_cost_usd,notes
+Body blank,1,ea,"maple, alder, walnut, or laminated hardwood body blank",70,"Stability and weight matter"
+Neck blank,1,ea,"maple or laminated neck stock",55,"Integrated or bolt-on TBD"
+Fingerboard,1,ea,"ebony, composite, or hard maple",35,"Scoop/setup TBD"
+Piezo bridge,1,ea,"4-string violin piezo bridge or 5-string variant if selected",80,"Compatibility with string count is critical"
+Preamp/output jack,1,set,"high-impedance piezo preamp and 1/4 in output",45,"May be external for first prototype"
+Tuners/pegs,4,ea,"violin pegs, geared pegs, or machine tuners",40,"5-string variant needs five"
+Tailpiece/fine tuners,1,set,"violin tailpiece compatible with pickup bridge",35,"String spacing must match"
+String set,1,set,"4-string or 5-string electric/acoustic violin set",55,"Use published tension data"
+Chin/shoulder interface,1,set,"chin rest and shoulder rest mounting plan",35,"Balance validation item"
+Finish/electrical supplies,1,lot,"finish, shielding, wire, solder, heat shrink",35,"Noise control TBD"
