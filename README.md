@@ -5,6 +5,14 @@ solid-body 4- and 5-string variants with piezo bridge pickup integration.
 
 Part of the [tonykoop/instrument-maker](https://github.com/tonykoop/instrument-maker) catalogue.
 
+## Status
+
+`V5 build-packet candidate` — V4 markdown layer and V5 audit-trail scaffold
+are in place. **Not yet `V5 verified`:** all five MCP-produced artifacts
+(parametric OpenSCAD master, vector design plates, hero render, print plate,
+DXF export) remain pending. See [`cad/mcp-session-log.md`](cad/mcp-session-log.md)
+for the deferred V5 deliverables.
+
 ## Readiness
 
 L2 scaffold. This repo now includes root-mode build packet documentation for a
@@ -16,11 +24,36 @@ open.
 
 - `design.md` - solid-body violin assumptions and 4/5-string variant notes.
 - `bom.csv`, `sourcing.csv`, `cut-list.csv`, `validation.csv` - packet tables.
+- `family-spec.csv` - per-member rows with `acoustic_law`, `end_condition`,
+  and `dimension_provenance` columns. String family is validator-exempt for
+  `validate_acoustic_law.py`; values use `unknown_requires_measurement` /
+  `n_a_empirical` / `measurement_required` until prototype data lands.
+- `visual-output-register.csv` - authority/role records for visual artifacts;
+  `electric-violin-design-table.xlsx` registered as the dimension authority.
 - `assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.
 - `drawing-brief.md`, `drawings/README.md`, `cad/README.md`,
   `wolfram-starter.wl`, `wolfram/README.md` - starter technical artifacts.
+- `cad/mcp-session-log.md` - audit trail for Claude Desktop MCP sessions
+  (OpenSCAD / Blender / Illustrator / Photoshop). Empty until the first
+  V5 session produces a committed artifact.
 - `explorer.html` - review map for packet files, validation gates, and
   readiness caveats.
+
+## V5 Gaps (Open Against Issue #1)
+
+The following V5 deliverables are required by the acceptance gates in
+[`tonykoop/electric-violin#1`](https://github.com/tonykoop/electric-violin/issues/1)
+and remain **not started** in this repo:
+
+- `cad/electric-violin.scad` (parametric OpenSCAD master).
+- `drawings/electric-violin.svg` and `.dxf`.
+- `images/hero-render.png` (Blender render or OpenSCAD STL → Blender).
+- `print-packet/assembly-plate.pdf` (callouts referencing design-table cells).
+- ≥ 1 row in `cad/mcp-session-log.md`.
+
+Each of these requires a Claude Desktop MCP session and a matching row in
+`visual-output-register.csv` before the README Status line can move to
+`V5 verified`.
 
 ## String-Scale Assumptions
 

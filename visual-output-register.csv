@@ -1,0 +1,2 @@
+artifact_id,path,artifact_kind,role,authority,dimension_claim,derived_from,session_id,notes
+VIS-001,electric-violin-design-table.xlsx,design_table,design_table,fabrication,derived_from_authority,workbook_master,,"Single-sheet extract from the Musical Instruments master workbook. This is the dimension authority for family-spec.csv values until measured prototype data supersedes it."
