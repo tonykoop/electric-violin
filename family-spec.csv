@@ -1,0 +1,10 @@
+member_id,variant,target_pitch_hz,target_note,scale_mm,string_count,string_set,acoustic_law,end_condition,dimension_provenance,notes
+EV-4S-G3,4-string baseline,196.00,G3,328,4,"G3-D4-A4-E5 standard violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Bowed/plucked solid-body. String-family Mersenne-Taylor model (f=1/(2L) sqrt(T/mu)) applies but is not enforced by validate_acoustic_law.py (wind/reed only). Treat scale and tensions as design-table assumptions until first prototype is measured."
+EV-4S-D4,4-string baseline,293.66,D4,328,4,"G3-D4-A4-E5 standard violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Same scale; per-string tension and percent-breaking still TBD."
+EV-4S-A4,4-string baseline,440.00,A4,328,4,"G3-D4-A4-E5 standard violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Reference tuning pitch. Bridge/piezo compatibility gate per validation.csv VAL-002."
+EV-4S-E5,4-string baseline,659.26,E5,328,4,"G3-D4-A4-E5 standard violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Highest string; pickup bandwidth and saddle radius are open gates."
+EV-5S-C3,5-string variant,130.81,C3,328,5,"C3-G3-D4-A4-E5 5-string violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Adds low C below G3; 5-string piezo bridge required (see bom.csv). Body/neck stiffness gate per validation.csv VAL-003."
+EV-5S-G3,5-string variant,196.00,G3,328,5,"C3-G3-D4-A4-E5 5-string violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Inherits baseline scale; string spacing TBD."
+EV-5S-D4,5-string variant,293.66,D4,328,5,"C3-G3-D4-A4-E5 5-string violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Inherits baseline scale."
+EV-5S-A4,5-string variant,440.00,A4,328,5,"C3-G3-D4-A4-E5 5-string violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Inherits baseline scale."
+EV-5S-E5,5-string variant,659.26,E5,328,5,"C3-G3-D4-A4-E5 5-string violin set",unknown_requires_measurement,n_a_empirical,measurement_required,"Inherits baseline scale."
