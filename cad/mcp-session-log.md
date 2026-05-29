@@ -21,7 +21,7 @@ has been committed.
 
 | timestamp | tool | artifact | claude_session_id | notes |
 | --- | --- | --- | --- | --- |
-| _no sessions yet_ | | | | |
+| 2026-05-29T00:00:00Z | claude-code | cad/electric-violin-placeholder.scad | cindy-r1-2026-05-29 | Parametric solid-body scaffold from design-table baseline. authority: pending_measurement. |
 
 ## Pending V5 deliverables
 
