@@ -7,7 +7,7 @@ Part of the [tonykoop/instrument-maker](https://github.com/tonykoop/instrument-m
 
 ## Status
 
-`V5 build-packet candidate` — V4 markdown layer and V5 audit-trail scaffold
+**Status: L2 V5 build-packet candidate** — V4 markdown layer and V5 audit-trail scaffold
 are in place. **Not yet `V5 verified`:** all five MCP-produced artifacts
 (parametric OpenSCAD master, vector design plates, hero render, print plate,
 DXF export) remain pending. See [`cad/mcp-session-log.md`](cad/mcp-session-log.md)

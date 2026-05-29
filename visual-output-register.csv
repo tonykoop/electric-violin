@@ -1,2 +1,10 @@
 artifact_id,path,artifact_kind,role,authority,dimension_claim,derived_from,session_id,notes
 VIS-001,electric-violin-design-table.xlsx,design_table,design_table,fabrication,derived_from_authority,workbook_master,,"Single-sheet extract from the Musical Instruments master workbook. This is the dimension authority for family-spec.csv values until measured prototype data supersedes it."
+VIS-002,family-spec.csv,family_spec,family_spec,fabrication,derived_from_authority,VIS-001,,L2 scaffold derived from design table.
+VIS-003,bom.csv,bom,bom,fabrication,derived_from_authority,VIS-001,,Make/buy material and hardware list.
+VIS-004,sourcing.csv,sourcing,sourcing,fabrication,derived_from_authority,,,Spec-first sourcing; live prices not verified.
+VIS-005,cut-list.csv,cut_list,cut_list,fabrication,derived_from_authority,VIS-001,,Rough/finish dimensions from baseline.
+VIS-006,validation.csv,measurement_template,measurement_template,fabrication,derived_from_authority,,,Validation gates for geometry, pickup, and setup.
+VIS-007,drawings/README.md,drawing,drawing_stub,pending_measurement,placeholder,,,Drawing stub. No DXF/SVG yet.
+VIS-008,wolfram-starter.wl,wolfram_source,wolfram,derived_preview,source_only,,,Wolfram source scaffold; source-only at L2.
+VIS-009,cad/electric-violin-placeholder.scad,cad_source,cad_authoring,pending_measurement,scaffold_dimensions,VIS-001,cindy-r1-2026-05-29,Parametric solid-body scaffold. Not fabrication authority until reviewed.
