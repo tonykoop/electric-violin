@@ -32,7 +32,7 @@ open.
   `electric-violin-design-table.xlsx` registered as the dimension authority.
 - `assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.
 - `drawing-brief.md`, `drawings/README.md`, `cad/README.md`,
-  `wolfram-starter.wl`, `wolfram/README.md` - starter technical artifacts.
+  `electric-violin-starter.wl`, `wolfram/README.md` - starter technical artifacts.
 - `cad/mcp-session-log.md` - audit trail for Claude Desktop MCP sessions
   (OpenSCAD / Blender / Illustrator / Photoshop). Empty until the first
   V5 session produces a committed artifact.

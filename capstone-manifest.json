@@ -44,7 +44,7 @@
     "validation.csv",
     "supplier-rfq.md",
     "visual-bom-brief.md",
-    "wolfram-starter.wl",
+    "electric-violin-starter.wl",
     "README.md",
     "photo-shotlist.md",
     "risks.md",
@@ -79,8 +79,8 @@
     ],
     "wolfram": [
       {
-        "source_file": "wolfram-starter.wl",
-        "cloud_path": "wolfram-starter.wl",
+        "source_file": "electric-violin-starter.wl",
+        "cloud_path": "electric-violin-starter.wl",
         "kind": "local-wl",
         "permission": "local"
       }
