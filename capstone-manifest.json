@@ -79,10 +79,11 @@
     ],
     "wolfram": [
       {
-        "source_file": "electric-violin-starter.wl",
-        "cloud_path": "electric-violin-starter.wl",
-        "kind": "local-wl",
-        "permission": "local"
+        "source_file": "strings/electric-violin/electric-violin-starter.wl",
+        "cloud_path": "Musical_Instruments/strings/electric-violin/electric-violin-starter.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/strings/electric-violin/electric-violin-starter.wl",
+        "permission": "Public-Execute",
+        "kind": "acoustics-starter"
       }
     ]
   },
