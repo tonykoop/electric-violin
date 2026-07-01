@@ -21,7 +21,13 @@ has been committed.
 
 | timestamp | tool | artifact | claude_session_id | notes |
 | --- | --- | --- | --- | --- |
-| 2026-05-29T00:00:00Z | claude-code | cad/electric-violin-placeholder.scad | cindy-r1-2026-05-29 | Parametric solid-body scaffold from design-table baseline. authority: pending_measurement. |
+| 2026-05-29T00:00:00Z | claude-code | cad/electric-violin-placeholder.scad (retired) | cindy-r1-2026-05-29 | Parametric solid-body scaffold from design-table baseline. Retired 2026-07-01, superseded by cad/electric-violin.scad. |
+| 2026-07-01T00:00:00Z | openscad | cad/electric-violin.scad | fable-v5-refresh-2026-07-01 | Parametric master. scale 328 mm from family-spec.csv; blank 2x8x16 in + neck 130 mm from electric-violin-design-table.xlsx; body outline placeholder (style-open). authority: pending_measurement. openscad render check: pass (openscad -o STL, exit 0). |
+| 2026-07-01T00:00:00Z | manual | electric-violin-design-table.xlsx | fable-v5-refresh-2026-07-01 | Dimension authority workbook; reviewed against family-spec.csv this pass. No dimension changes. Provenance row added for V5 fabrication logging. |
+| 2026-07-01T00:00:00Z | manual | bom.csv | fable-v5-refresh-2026-07-01 | Material/hardware/electronics list reviewed against design-table baseline. No changes. |
+| 2026-07-01T00:00:00Z | manual | sourcing.csv | fable-v5-refresh-2026-07-01 | Spec-first sourcing; prices unverified. Reviewed against design table. |
+| 2026-07-01T00:00:00Z | manual | cut-list.csv | fable-v5-refresh-2026-07-01 | Rough/finish stock from design-table baseline. Reviewed. |
+| 2026-07-01T00:00:00Z | manual | validation.csv | fable-v5-refresh-2026-07-01 | Geometry/pickup/setup gates reviewed against design table. |
 
 ## Pending V5 deliverables
 
