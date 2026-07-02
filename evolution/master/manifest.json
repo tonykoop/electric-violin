@@ -1,0 +1,34 @@
+{
+  "product": "electric-violin",
+  "pipeline": "studiopipeline:evolution-pipeline",
+  "stage": "0-intake",
+  "master_revision": "rev-A (pre-commit intake, 2026-07-01)",
+  "generated": "2026-07-01",
+  "cad_masters": [
+    {
+      "path": "cad/electric-violin.scad",
+      "format": "openscad-source",
+      "sha256": "7e086e06805f420f4e2214f80a6d062d48054e5ce428b7f203fe9107fdb80873",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Parametric master (mm); scale 328 mm authoritative, body outline placeholder, tensions/setup measurement_required."
+    },
+    {
+      "path": "electric-violin-design-table.xlsx",
+      "format": "design-table",
+      "sha256": "6f20265c8c52decb553231de13495e6830ca4674a48fc843538ab7fa9406ef58",
+      "authority": "fabrication",
+      "lossy": false,
+      "notes": "Current dimensional authority (blank size, neck join, fingerboard, BOM, 22-step build method)."
+    },
+    {
+      "path": "electric-violin-starter.wl",
+      "format": "wolfram-source",
+      "sha256": "aec2afbf8bd2f7d70da7aa886367a555c54fcfa026cccdb600cc112b2591f9d1",
+      "authority": "derived_preview",
+      "lossy": false,
+      "notes": "Wolfram source scaffold; not executed. L2 evidence."
+    }
+  ],
+  "notes": "OpenSCAD source + design table are the current masters; no STEP/DXF export yet (SolidWorks/DXF export is Windows-side work, out of scope for this intake pass). Body outline is style-open; scale length (328 mm) is the family authority. Gate A (Alpha workspace compile) not yet run."
+}

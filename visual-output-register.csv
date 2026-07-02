@@ -7,4 +7,4 @@ VIS-005,cut-list.csv,cut_list,cut_list,fabrication,derived_from_authority,VIS-00
 VIS-006,validation.csv,measurement_template,measurement_template,fabrication,derived_from_authority,,,Validation gates for geometry, pickup, and setup.
 VIS-007,drawings/README.md,drawing,drawing_stub,pending_measurement,placeholder,,,Drawing stub. No DXF/SVG yet.
 VIS-008,electric-violin-starter.wl,wolfram_source,wolfram,derived_preview,source_only,,,Wolfram source scaffold; source-only at L2.
-VIS-009,cad/electric-violin-placeholder.scad,cad_source,cad_authoring,pending_measurement,scaffold_dimensions,VIS-001,cindy-r1-2026-05-29,Parametric solid-body scaffold. Not fabrication authority until reviewed.
+VIS-009,cad/electric-violin.scad,cad_source,cad_authoring,pending_measurement,derived_from_authority,VIS-001,fable-v5-refresh-2026-07-01,"Parametric OpenSCAD master: scale 328 mm (family-spec) + blank envelope (design table); body outline is a non-authoritative placeholder. Renders clean in OpenSCAD. Not fabrication authority until measured. Supersedes retired electric-violin-placeholder.scad."

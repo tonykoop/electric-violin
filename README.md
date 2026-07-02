@@ -7,7 +7,7 @@ Part of the [tonykoop/instrument-maker](https://github.com/tonykoop/instrument-m
 
 ## Status
 
-**Status: L2 V5 build-packet candidate** — V4 markdown layer and V5 audit-trail scaffold
+**Status:** L2 V5 build-packet candidate — V4 markdown layer and V5 audit-trail scaffold
 are in place. **Not yet `V5 verified`:** all five MCP-produced artifacts
 (parametric OpenSCAD master, vector design plates, hero render, print plate,
 DXF export) remain pending. See [`cad/mcp-session-log.md`](cad/mcp-session-log.md)
@@ -36,20 +36,27 @@ open.
 - `cad/mcp-session-log.md` - audit trail for Claude Desktop MCP sessions
   (OpenSCAD / Blender / Illustrator / Photoshop). Empty until the first
   V5 session produces a committed artifact.
+- `cad/electric-violin.scad` - parametric OpenSCAD master (scale 328 mm from
+  family-spec; blank envelope from design table; body outline placeholder).
+  Authority: pending_measurement; renders clean, not fabrication authority.
+- `evolution/` - Stage 0 evolution-pipeline intake (master manifest, design
+  intent, revision register). Gate A not yet run.
 - `explorer.html` - review map for packet files, validation gates, and
   readiness caveats.
 
 ## V5 Gaps (Open Against Issue #1)
 
 The following V5 deliverables are required by the acceptance gates in
-[`tonykoop/electric-violin#1`](https://github.com/tonykoop/electric-violin/issues/1)
-and remain **not started** in this repo:
+[`tonykoop/electric-violin#1`](https://github.com/tonykoop/electric-violin/issues/1).
+The parametric OpenSCAD master and its provenance row are now delivered
+(2026-07-01 V5 refresh); the remaining items stay **not started**:
 
-- `cad/electric-violin.scad` (parametric OpenSCAD master).
+- `cad/electric-violin.scad` (parametric OpenSCAD master) — DELIVERED, authority
+  pending_measurement (renders clean; not fabrication authority until measured).
 - `drawings/electric-violin.svg` and `.dxf`.
 - `images/hero-render.png` (Blender render or OpenSCAD STL → Blender).
 - `print-packet/assembly-plate.pdf` (callouts referencing design-table cells).
-- ≥ 1 row in `cad/mcp-session-log.md`.
+- ≥ 1 row in `cad/mcp-session-log.md` — DELIVERED.
 
 Each of these requires a Claude Desktop MCP session and a matching row in
 `visual-output-register.csv` before the README Status line can move to
